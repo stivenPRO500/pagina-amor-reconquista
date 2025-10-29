@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro Amor ❤️</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Fondo de partículas -->
+    <div id="particles-container"></div>
+    
+    <!-- Corazones flotantes -->
+    <div class="hearts-background">
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+    </div>
+
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-heart"></i>
+                <span>Nuestro Amor</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#memorias" class="nav-link">Memorias</a></li>
+                <li><a href="#galeria" class="nav-link">Galería</a></li>
+                <li><a href="#mensajes" class="nav-link">Mensajes</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sección de Inicio -->
+    <section id="inicio" class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="text-animate">Para</span>
+                <span class="text-animate delay-1">el</span>
+                <span class="text-animate delay-2">amor</span>
+                <span class="text-animate delay-3">de</span>
+                <span class="text-animate delay-4">mi</span>
+                <span class="text-animate delay-5">vida</span>
+                <i class="fas fa-heart heartbeat"></i>
+            </h1>
+            <p class="hero-subtitle fade-in-up">
+                Cada momento contigo ha sido mágico, y quiero que sepas que mi corazón te pertenece completamente.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="scrollToSection('galeria')">
+                    <i class="fas fa-images"></i>
+                    Ver Nuestras Memorias
+                </button>
+                <button class="btn-secondary" onclick="playMusic()">
+                    <i class="fas fa-music"></i>
+                    <span id="music-text">Escuchar Nuestra Canción</span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Audio de fondo (opcional) -->
+        <audio id="background-music" loop>
+            <source src="music/001Bon Jovi - Always.mp3" type="audio/mpeg">
+            <!-- Puedes agregar tu canción favorita aquí -->
+        </audio>
+    </section>
+
+    <!-- Sección de Timeline/Memorias -->
+    <section id="memorias" class="timeline-section">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-clock"></i>
+                Nuestra Historia de Amor
+            </h2>
+            
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <i class="fas fa-calendar-heart"></i>
+                            Primer Encuentro
+                        </div>
+                        <h3>El día del sigueme</h3>
+                        <p>Recuerdo perfectamente ese momento cuando nuestros ojos se cruzaron por primera vez. Fue como si el tiempo se detuviera y solo existiéramos tú y yo no te imaginas lo nervioso que me ponias que ni podia mantenerte la mirada.</p>
+                        <div class="timeline-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <i class="fas fa-kiss"></i>
+                            Primera Cita
+                        </div>
+                        <h3>Nervios y mariposas</h3>
+                        <p>Esa primera cita fue perfecta. nunca habia salido con alguien y que tu fueras mi primer cita fue lo mas hermoso y marabilloso que me paso aunque no te imaginas como me ponias de nervioso pero me sentia feliz de solo poder tenerte tan cerca de mi.</p>
+                        <div class="timeline-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <i class="fas fa-ring"></i>
+                            Nos Hicimos Novios
+                        </div>
+                        <h3>El momento más feliz</h3>
+                        <p>Cuando me dijiste que sí, cuando decidimos estar juntos, sentí que podía conquistar el mundo. Eres mi persona favorita en todo el universo ese dia supe que habia alcanzado mi prime.</p>
+                        <div class="timeline-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <i class="fas fa-star"></i>
+                            Momentos Especiales
+                        </div>
+                        <h3>Cada día contigo</h3>
+                        <p>Desde aventuras increíbles hasta momentos silenciosos viendo películas, cada segundo a tu lado ha sido un regalo. Eres mi hogar no puedo imaginarme compartiendo mi vida con alguien que no seas tu.</p>
+                        <div class="timeline-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <i class="fas fa-heart-broken"></i>
+                            El Momento Difícil
+                        </div>
+                        <h3>Cuando cometí errores</h3>
+                        <p>Sé que he cometido errores y te he lastimado, y por eso estoy aquí, con el corazón en la mano, pidiéndote perdón. Mi amor por ti es sincero y profundo, y haré todo lo posible para demostrarte que puedo ser el hombre que mereces.</p>
+                        <div class="timeline-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <i class="fas fa-heart-circle-check"></i>
+                            tu me conoces
+                        </div>
+                        <h3>todo este tiempo juntos</h3>
+                        <p>me as ayudado a ser cada dia una mejor persona tu conoces mis fuertes y mis defectos sabes la clase de persona que soy me as visto llorar, sonreir, triunfar y fracasar te he mostrado mi lado mas sensible y eres tu la unica persona que lo a visto y luchare por ti siempre como tu mas fiel escudero, yo se que tu de verdad conoces a mi verdadero yo y sabes que te ama con todo su corazon</p>
+                        <div class="timeline-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                    
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería de Fotos -->
+    <section id="galeria" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-camera"></i>
+                Nuestros Momentos Mágicos
+            </h2>
+            
+            <div class="gallery-grid">
+                <!-- Foto 1 -->
+                <div class="gallery-item" onclick="openModal('images/foto1.png', 'amo tu nuevo color')">
+                    <div class="gallery-image">
+                        <img src="images/foto1.png" alt="amo tu nuevo color" onerror="this.src='https://via.placeholder.com/400x300/ff6b9d/ffffff?text=Agrega+tu+foto+1'">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <p>amo tu nuevo color</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Foto 2 -->
+                <div class="gallery-item" onclick="openModal('images/foto2.png', 'en tu cumpleaños')">
+                    <div class="gallery-image">
+                        <img src="images/foto2.png" alt="en tu cumpleaños" onerror="this.src='https://via.placeholder.com/400x300/ff6b9d/ffffff?text=Agrega+tu+foto+2'">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <p>en tu cumpleaños</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Foto 3 -->
+                <div class="gallery-item" onclick="openModal('images/foto3.png', 'nuestra cita en el mirador')">
+                    <div class="gallery-image">
+                        <img src="images/foto3.png" alt="nuestra cita en el mirador" onerror="this.src='https://via.placeholder.com/400x300/ff6b9d/ffffff?text=Agrega+tu+foto+3'">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <p>nuestra cita en el mirador</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Foto 4 -->
+                <div class="gallery-item" onclick="openModal('images/foto4.png', 'cuando te lleve al salamo')">
+                    <div class="gallery-image">
+                        <img src="images/foto4.png" alt="cuando te lleve al salamo" onerror="this.src='https://via.placeholder.com/400x300/ff6b9d/ffffff?text=Agrega+tu+foto+4'">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <p>cuando te lleve al salamo</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Foto 5 -->
+                <div class="gallery-item" onclick="openModal('images/foto5.png', 'en el arbolito de navidad')">
+                    <div class="gallery-image">
+                        <img src="images/foto5.png" alt="en el arbolito de navidad" onerror="this.src='https://via.placeholder.com/400x300/ff6b9d/ffffff?text=Agrega+tu+foto+5'">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <p>en el arbolito de navidad</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Foto 6 -->
+                <div class="gallery-item" onclick="openModal('images/foto6.png', 'cuando te sorprendí con un ramo de flores')">
+                    <div class="gallery-image">
+                        <img src="images/foto6.png" alt="cuando te sorprendí con un ramo de flores" onerror="this.src='https://via.placeholder.com/400x300/ff6b9d/ffffff?text=Agrega+tu+foto+6'">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <p>cuando te sorprendí con un ramo de flores</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Foto 6 -->
+                <div class="gallery-item" onclick="openModal('images/foto7.png', 'cuando ganamos la final')">
+                    <div class="gallery-image">
+                        <img src="images/foto7.png" alt="cuando ganamos la final" onerror="this.src='https://via.placeholder.com/400x300/ff6b9d/ffffff?text=Agrega+tu+foto+7'">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <p>cuando ganamos la final</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Foto 7 -->
+                <div class="gallery-item" onclick="openModal('images/foto8.png', 'cuando me captaste besandote')">
+                    <div class="gallery-image">
+                        <img src="images/foto8.png" alt="cuando me captaste besandote" onerror="this.src='https://via.placeholder.com/400x300/ff6b9d/ffffff?text=Agrega+tu+foto+8'">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <p>cuando me captaste besandote</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Foto 8 -->
+                <div class="gallery-item" onclick="openModal('images/foto9.png', 'cuando te derrote en los bolos')">
+                    <div class="gallery-image">
+                        <img src="images/foto9.png" alt="cuando te derrote en los bolos" onerror="this.src='https://via.placeholder.com/400x300/ff6b9d/ffffff?text=Agrega+tu+foto+9'">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <p>cuando te derrote en los bolos</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Foto 9 -->
+                <div class="gallery-item" onclick="openModal('images/foto10.png', 'tragico dia sin pelo')">
+                    <div class="gallery-image">
+                        <img src="images/foto10.png" alt="tragico dia sin pelo" onerror="this.src='https://via.placeholder.com/400x300/ff6b9d/ffffff?text=Agrega+tu+foto+10'">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <p>tragico dia sin pelo</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Foto 11 -->
+                <div class="gallery-item" onclick="openModal('images/foto11.png', 'no te imaginas lo feliz que fui cuando te vi llegar')">
+                    <div class="gallery-image">
+                        <img src="images/foto11.png" alt="no te imaginas lo feliz que fui cuando te vi llegar" onerror="this.src='https://via.placeholder.com/400x300/ff6b9d/ffffff?text=Agrega+tu+foto+11'">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <p>no te imaginas lo feliz que fui cuando te vi llegar</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Foto 12 -->
+                <div class="gallery-item" onclick="openModal('images/foto12.png', 'perdidos en el bosque')">
+                    <div class="gallery-image">
+                        <img src="images/foto12.png" alt="perdidos en el bosque" onerror="this.src='https://via.placeholder.com/400x300/ff6b9d/ffffff?text=Agrega+tu+foto+12'">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <p>perdidos en el bosque</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Foto 13 -->
+                <div class="gallery-item" onclick="openModal('images/foto13.png', 'en nuestro cine favorito')">
+                    <div class="gallery-image">
+                        <img src="images/foto13.png" alt="en nuestro cine favorito" onerror="this.src='https://via.placeholder.com/400x300/ff6b9d/ffffff?text=Agrega+tu+foto+13'">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <p>en nuestro cine favorito</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Foto 14 -->
+                <div class="gallery-item" onclick="openModal('images/foto14.png', 'perdidos en la feria de jalapa')">
+                    <div class="gallery-image">
+                        <img src="images/foto14.png" alt="perdidos en la feria de jalapa" onerror="this.src='https://via.placeholder.com/400x300/ff6b9d/ffffff?text=Agrega+tu+foto+14'">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <p>perdidos en la feria de jalapa</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Foto 15 -->
+                <div class="gallery-item" onclick="openModal('images/foto15.png', 'para mis 15 años')">
+                    <div class="gallery-image">
+                        <img src="images/foto15.png" alt="para mis 15 años" onerror="this.src='https://via.placeholder.com/400x300/ff6b9d/ffffff?text=Agrega+tu+foto+15'">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <p>para mis 15 años</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Foto 16 -->
+                <div class="gallery-item" onclick="openModal('images/foto16.png', 'cuando llegamos a la laguna')">
+                    <div class="gallery-image">
+                        <img src="images/foto16.png" alt="cuando llegamos a la laguna" onerror="this.src='https://via.placeholder.com/400x300/ff6b9d/ffffff?text=Agrega+tu+foto+16'">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <p>cuando llegamos a la laguna</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Foto 17 -->
+                <div class="gallery-item" onclick="openModal('images/foto17.png', 'nuestra foto mas epica de todas nos vemos brutal')">
+                    <div class="gallery-image">
+                        <img src="images/foto17.png" alt="nuestra foto mas epica de todas nos vemos brutal" onerror="this.src='https://via.placeholder.com/400x300/ff6b9d/ffffff?text=Agrega+tu+foto+17'">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <p>nuestra foto mas epica de todas nos vemos brutal</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Foto 18 -->
+                <div class="gallery-item" onclick="openModal('images/foto18.png', 'para nuestro primer aniversario')">
+                    <div class="gallery-image">
+                        <img src="images/foto18.png" alt="para nuestro primer aniversario" onerror="this.src='https://via.placeholder.com/400x300/ff6b9d/ffffff?text=Agrega+tu+foto+18'">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <p>para nuestro primer aniversario</p>
+                        </div>
+                    </div>
+                </div>
+                
+
+        </div>
+    </section>
+
+    <!-- Modal para las fotos -->
+    <div id="photo-modal" class="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-image">
+        <div class="modal-caption" id="modal-caption"></div>
+    </div>
+
+    <!-- Sección de Mensajes de Amor -->
+    <section id="mensajes" class="messages-section">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-envelope-heart"></i>
+                Mensajes desde mi Corazón
+            </h2>
+            
+            <div class="messages-container">
+                <div class="message-card">
+                    <div class="message-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Te Amo Más Que a las Estrellas</h3>
+                    <p>Cada noche miro las estrellas y pienso en ti. Eres mi luz en la oscuridad, mi razón para sonreír cada día. Sin ti, el mundo perdería todos sus colores.</p>
+                    <div class="message-footer">
+                        <span>Con todo mi amor ❤️</span>
+                    </div>
+                </div>
+                
+                <div class="message-card">
+                    <div class="message-icon">
+                        <i class="fas fa-infinity"></i>
+                    </div>
+                    <h3>Para Siempre y Más Allá</h3>
+                    <p>Mi amor por ti no tiene límites ni fronteras. Es infinito como el universo, profundo como el océano, y ardiente como el sol. Quiero pasar el resto de mi vida demostrándotelo te amo en este y en todos los universos.</p>
+                    <div class="message-footer">
+                        <span>Eternamente tuyo 💫</span>
+                    </div>
+                </div>
+                
+                <div class="message-card">
+                    <div class="message-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Eres Mi Tesoro Más Preciado</h3>
+                    <p>No hay joyas en el mundo que puedan compararse contigo. Eres única, especial, perfecta. Cada defecto tuyo es una virtud para mí, cada sonrisa tuya ilumina mi alma y tú conoces mi alma y sabes que te amo con todo mi ser.</p>
+                    <div class="message-footer">
+                        <span>Mi princesa 👑</span>
+                    </div>
+                </div>
+                
+                <div class="message-card final-message">
+                    <div class="message-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Perdóname, mi vida no tiene sentido sin ti</h3>
+                    <p>Sé que cometí errores, que no fui perfecto. Pero mi amor por ti es real y verdadero. Quiero la oportunidad de demostrarte que puedo ser mejor, que juntos podemos superar cualquier obstáculo. Tú eres mi hogar, mi paz, mi todo.</p>
+                    <div class="message-footer">
+                        <span>¿Me das la oportunidad de demostrarte que por ti me convierto en el hombre que necesites? 🙏💕</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Botón especial -->
+            <div class="special-button-container">
+                <button class="special-button" onclick="showSpecialMessage()">
+                    <span class="button-text">Un Mensaje Especial Para Ti si decides aceptar</span>
+                    <div class="button-hearts">
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mensaje especial oculto -->
+    <div id="special-message" class="special-message-overlay">
+        <div class="special-message-content">
+            <div class="special-message-close" onclick="hideSpecialMessage()">&times;</div>
+            <div class="special-message-animation">
+                <i class="fas fa-heart pulse-heart"></i>
+            </div>
+            <h2>Mi Amor Eterno</h2>
+            <p>
+                Si estás leyendo esto, es porque decidiste darme la oportunidad de hablar con tu corazón. 
+                No hay palabras suficientes para expresar lo que siento por ti. Eres mi sol, mi luna, 
+                mis estrellas. Sin ti, mi mundo está incompleto.
+            </p>
+            <p>
+                Prometo que si me das otra oportunidad, seré el hombre que te mereces. 
+                Haré todo lo posible para hacerte feliz cada día de nuestras vidas.
+            </p>
+            <div class="special-message-signature">
+                <p>Con todo mi amor infinito,</p>
+                <p class="signature">Tu amor eterno 💕</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 - Creado con amor para reconquistar a mi princesa ❤️</p>
+            <div class="footer-hearts">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
