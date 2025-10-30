@@ -561,6 +561,277 @@ body {
     font-size: 1.2rem;
 }
 
+/* Todo Este Tiempo Juntos */
+.time-together-section {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, rgba(255, 107, 157, 0.1) 0%, rgba(108, 92, 231, 0.1) 100%);
+    backdrop-filter: blur(15px);
+    position: relative;
+    overflow: hidden;
+}
+
+.time-together-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="hearts" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><text x="10" y="15" text-anchor="middle" font-size="12" fill="rgba(255,107,157,0.1)">♥</text></pattern></defs><rect width="100" height="100" fill="url(%23hearts)"/></svg>');
+    pointer-events: none;
+    z-index: -1;
+}
+
+.time-together-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.romantic-quote {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+    padding: 2rem;
+}
+
+.quote-icon {
+    font-size: 2rem;
+    color: var(--heart-color);
+    opacity: 0.7;
+}
+
+.main-quote {
+    font-size: 1.8rem;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+    color: var(--text-light);
+    margin: 1rem 0;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.memories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.memory-item {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: var(--shadow-medium);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.memory-item:nth-child(1) { animation-delay: 0.2s; }
+.memory-item:nth-child(2) { animation-delay: 0.4s; }
+.memory-item:nth-child(3) { animation-delay: 0.6s; }
+.memory-item:nth-child(4) { animation-delay: 0.8s; }
+
+.memory-item::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transform: rotate(45deg);
+    transition: transform 0.6s ease;
+    opacity: 0;
+}
+
+.memory-item:hover::before {
+    transform: rotate(45deg) translate(50%, 50%);
+    opacity: 1;
+}
+
+.memory-item:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: var(--shadow-strong);
+}
+
+.memory-icon {
+    font-size: 3rem;
+    color: var(--heart-color);
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 107, 157, 0.2);
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.memory-item h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.memory-item p {
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+}
+
+.heartfelt-message {
+    background: linear-gradient(135deg, rgba(255, 107, 157, 0.15), rgba(108, 92, 231, 0.15));
+    backdrop-filter: blur(20px);
+    padding: 3rem;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: var(--shadow-strong);
+    border: 2px solid rgba(255, 107, 157, 0.3);
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 1s ease-out 1s forwards;
+    opacity: 0;
+}
+
+.heartfelt-message::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 107, 157, 0.1) 0%, transparent 70%);
+    animation: rotateGlow 10s linear infinite;
+}
+
+.message-content {
+    position: relative;
+    z-index: 2;
+}
+
+.message-content h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-light);
+    font-weight: 700;
+}
+
+.message-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.final-plea {
+    font-size: 1.3rem !important;
+    color: var(--primary-color) !important;
+    font-weight: 600 !important;
+    margin-top: 2rem !important;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    border: 1px solid var(--primary-color);
+}
+
+.floating-hearts {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.floating-hearts i {
+    color: var(--heart-color);
+    font-size: 1.2rem;
+    animation: heartFloat 3s ease-in-out infinite;
+}
+
+.floating-hearts i:nth-child(1) { animation-delay: 0s; }
+.floating-hearts i:nth-child(2) { animation-delay: 0.3s; }
+.floating-hearts i:nth-child(3) { animation-delay: 0.6s; }
+.floating-hearts i:nth-child(4) { animation-delay: 0.9s; }
+.floating-hearts i:nth-child(5) { animation-delay: 1.2s; }
+
+/* Animaciones adicionales para la nueva sección */
+@keyframes rotateGlow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes heartFloat {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translateY(-10px) scale(1.1);
+        opacity: 1;
+    }
+}
+
+/* Responsive para la nueva sección */
+@media (max-width: 768px) {
+    .time-together-section {
+        padding: 4rem 0;
+    }
+    
+    .main-quote {
+        font-size: 1.4rem;
+    }
+    
+    .memories-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .heartfelt-message {
+        padding: 2rem;
+    }
+    
+    .message-content h3 {
+        font-size: 2rem;
+    }
+    
+    .floating-hearts {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-quote {
+        font-size: 1.2rem;
+    }
+    
+    .message-content h3 {
+        font-size: 1.8rem;
+    }
+    
+    .memory-item {
+        padding: 1.5rem;
+    }
+    
+    .heartfelt-message {
+        padding: 1.5rem;
+    }
+}
+
 /* Mensajes de amor */
 .messages-section {
     padding: 5rem 0;
